@@ -42,7 +42,6 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func unwindSegueToFirstVC(segue: UIStoryboardSegue) {
-        
         userNameTF.text = ""
         passwordTF.text = ""
     }
@@ -55,9 +54,7 @@ extension FirstViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-}
-
-extension FirstViewController: UITextViewDelegate {
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
