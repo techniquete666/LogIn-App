@@ -7,10 +7,24 @@ class FirstViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var userNameTF: UITextField!
     
+    private let user = "User"
+    private let password = "Password"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationVC = segue.destination as? WelcomeViewController else { return }
         destinationVC.userName = userNameTF.text
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        passwordTF.text = password
+        userNameTF.text = user
     }
 
     @IBAction func logInButtonTapped() {
@@ -19,26 +33,17 @@ class FirstViewController: UIViewController {
         if userName != "User" || password != "Password" {
             showAlert(
                 title: "Invalid login or password",
-                message: "Please, enter correct login and password"
+                message: "Please, enter correct login and password",
+                textField: passwordTF
             )
-            passwordTF.text = ""
         }
-        
         performSegue(withIdentifier: "logIn", sender: nil)
     }
     
-    @IBAction func passwordButtonTapped() {
-        showAlert(
-            title: "Oops!",
-            message: "Your password is Password 😱"
-        )
-    }
-    
-    @IBAction func userNameButtonTapped() {
-        showAlert(
-            title: "Oops!",
-            message: "Your username is User 😱"
-        )
+    @IBAction func forgotData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Oops!", message: "Your name is \(user) 😱")
+        : showAlert(title: "Oops!", message: "Your password is \(password) 😱")
     }
     
     @IBAction func unwindSegueToFirstVC(segue: UIStoryboardSegue) {
@@ -48,16 +53,13 @@ class FirstViewController: UIViewController {
 }
 
 extension FirstViewController {
-    private func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
     }
 }
 

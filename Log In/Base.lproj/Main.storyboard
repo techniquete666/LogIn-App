@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pMh-JR-kkf">
-                                <rect key="frame" x="64.666666666666686" y="229" width="301" height="34"/>
+                                <rect key="frame" x="64.666666666666686" y="209" width="301" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXC-pF-1RW">
-                                <rect key="frame" x="64.666666666666686" y="283" width="301" height="34"/>
+                                <rect key="frame" x="64.666666666666686" y="263" width="301" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGx-wk-gYZ">
-                                <rect key="frame" x="154.66666666666666" y="347" width="120.66666666666666" height="41"/>
+                                <rect key="frame" x="154.66666666666666" y="317" width="120.66666666666666" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log In">
@@ -37,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xs-bX-Pnp">
-                                <rect key="frame" x="30" y="413" width="118" height="28"/>
+                                <rect key="frame" x="30" y="363" width="118" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="Y1J-by-1Fp"/>
                                 </constraints>
@@ -47,11 +48,11 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="userNameButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Zp-k6-hsu"/>
+                                    <action selector="forgotData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAv-Ia-aMv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmL-6b-Obj">
-                                <rect key="frame" x="290" y="413" width="110" height="28"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmL-6b-Obj">
+                                <rect key="frame" x="290" y="363" width="110" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="7dD-B0-XLD"/>
                                 </constraints>
@@ -61,7 +62,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="passwordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="KO3-Gs-EvM"/>
+                                    <action selector="forgotData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ngi-yU-4hN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,21 +70,21 @@
                         <color key="backgroundColor" red="0.98985180412371132" green="0.84004649433701706" blue="0.82649086397090743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qGx-wk-gYZ" firstAttribute="centerX" secondItem="dXC-pF-1RW" secondAttribute="centerX" id="3xC-Wy-1mV"/>
-                            <constraint firstItem="qGx-wk-gYZ" firstAttribute="top" secondItem="dXC-pF-1RW" secondAttribute="bottom" constant="30" id="9zj-qJ-I6I"/>
+                            <constraint firstItem="qGx-wk-gYZ" firstAttribute="top" secondItem="dXC-pF-1RW" secondAttribute="bottom" constant="20" id="9zj-qJ-I6I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZmL-6b-Obj" secondAttribute="trailing" id="CHg-FT-khg"/>
                             <constraint firstItem="dXC-pF-1RW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DbE-4J-1GZ"/>
-                            <constraint firstItem="3Xs-bX-Pnp" firstAttribute="top" secondItem="qGx-wk-gYZ" secondAttribute="bottom" constant="25" id="FOc-di-elg"/>
+                            <constraint firstItem="3Xs-bX-Pnp" firstAttribute="top" secondItem="qGx-wk-gYZ" secondAttribute="bottom" constant="5" id="FOc-di-elg"/>
                             <constraint firstItem="qGx-wk-gYZ" firstAttribute="width" secondItem="dXC-pF-1RW" secondAttribute="width" multiplier="0.4" id="GDf-eS-Wxp"/>
                             <constraint firstItem="ZmL-6b-Obj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Xs-bX-Pnp" secondAttribute="trailing" constant="8" symbolic="YES" id="PKJ-MJ-s7z"/>
                             <constraint firstItem="pMh-JR-kkf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XAD-yj-sLY"/>
                             <constraint firstItem="3Xs-bX-Pnp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="cEY-UO-dsa"/>
-                            <constraint firstItem="ZmL-6b-Obj" firstAttribute="top" secondItem="qGx-wk-gYZ" secondAttribute="bottom" constant="25" id="efy-tU-JVJ"/>
+                            <constraint firstItem="ZmL-6b-Obj" firstAttribute="top" secondItem="qGx-wk-gYZ" secondAttribute="bottom" constant="5" id="efy-tU-JVJ"/>
                             <constraint firstItem="dXC-pF-1RW" firstAttribute="top" secondItem="pMh-JR-kkf" secondAttribute="bottom" constant="20" id="fMk-4F-dgK"/>
                             <constraint firstItem="pMh-JR-kkf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="gUE-EU-JaM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Xs-bX-Pnp" secondAttribute="trailing" symbolic="YES" id="nWF-4m-8AO"/>
                             <constraint firstItem="dXC-pF-1RW" firstAttribute="width" secondItem="pMh-JR-kkf" secondAttribute="width" id="oof-pJ-oBf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZmL-6b-Obj" secondAttribute="trailing" constant="30" id="qcQ-wb-fJq"/>
-                            <constraint firstItem="pMh-JR-kkf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="tLc-2e-OeN"/>
+                            <constraint firstItem="pMh-JR-kkf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="tLc-2e-OeN"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
