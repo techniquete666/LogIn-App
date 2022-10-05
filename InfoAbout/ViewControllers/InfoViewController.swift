@@ -1,11 +1,17 @@
 
+
 import UIKit
 
-class WelcomeViewController: UIViewController {
-
-    @IBOutlet var nameLabel: UILabel!
+class InfoViewController: UIViewController {
     
-    var userName : String!
+    @IBOutlet var name: UILabel!
+    @IBOutlet var surname: UILabel!
+    @IBOutlet var placeOfBirth: UILabel!
+    @IBOutlet var yearOfBirth: UILabel!
+    
+    @IBOutlet var photo: UIImageView!
+    
+    private let information = User.getInfoAbout()
     
     private let primaryColor = UIColor(
         red: 210/255,
@@ -23,12 +29,21 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        nameLabel.text = "Welcome, \(userName ?? "")!"
+        
+        name.text = information.name
+        surname.text = information.surname
+        placeOfBirth.text = information.placeOfBirth
+        yearOfBirth.text = information.yearOfBirth
     }
+    
+    override func viewWillLayoutSubviews() {
+        photo.layer.cornerRadius = photo.frame.width / 2
+    }
+    
 }
 
 extension UIView {
-    func addVerticalGradientLayer(topColor: UIColor, bottomColor: UIColor) {
+    func addSecondVerticalGradientLayer(topColor: UIColor, bottomColor: UIColor) {
         let gradient = CAGradientLayer()
         gradient.frame = bounds
         gradient.colors = [topColor.cgColor, bottomColor.cgColor]
@@ -38,3 +53,4 @@ extension UIView {
         layer.insertSublayer(gradient, at: 0)
     }
 }
+

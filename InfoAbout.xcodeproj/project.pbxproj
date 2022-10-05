@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004E02BA28EDA726004B675B /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004E02B928EDA726004B675B /* BioViewController.swift */; };
+		004E02BC28EDA744004B675B /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004E02BB28EDA744004B675B /* InfoViewController.swift */; };
+		004E02BE28EDADCE004B675B /* dd.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004E02BD28EDADCE004B675B /* dd.jpeg */; };
+		004E02C428EDD877004B675B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004E02C328EDD877004B675B /* UserInfo.swift */; };
 		009AF9F028E6F41C00DF9236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009AF9EF28E6F41C00DF9236 /* AppDelegate.swift */; };
 		009AF9F228E6F41C00DF9236 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009AF9F128E6F41C00DF9236 /* SceneDelegate.swift */; };
 		009AF9F428E6F41C00DF9236 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009AF9F328E6F41C00DF9236 /* FirstViewController.swift */; };
 		009AF9F728E6F41C00DF9236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009AF9F528E6F41C00DF9236 /* Main.storyboard */; };
 		009AF9F928E6F41E00DF9236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 009AF9F828E6F41E00DF9236 /* Assets.xcassets */; };
 		009AF9FC28E6F41E00DF9236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009AF9FA28E6F41E00DF9236 /* LaunchScreen.storyboard */; };
-		00F9BCCC28E7070F0074FEBA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9BCCB28E7070F0074FEBA /* WelcomeViewController.swift */; };
+		00F9BCCC28E7070F0074FEBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9BCCB28E7070F0074FEBA /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		009AF9EC28E6F41C00DF9236 /* Log In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Log In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		004E02B928EDA726004B675B /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		004E02BB28EDA744004B675B /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		004E02BD28EDADCE004B675B /* dd.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dd.jpeg; path = ../../../../Downloads/dd.jpeg; sourceTree = "<group>"; };
+		004E02C328EDD877004B675B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		009AF9EC28E6F41C00DF9236 /* InfoAbout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfoAbout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		009AF9EF28E6F41C00DF9236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		009AF9F128E6F41C00DF9236 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		009AF9F328E6F41C00DF9236 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +33,7 @@
 		009AF9F828E6F41E00DF9236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		009AF9FB28E6F41E00DF9236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		009AF9FD28E6F41E00DF9236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00F9BCCB28E7070F0074FEBA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		00F9BCCB28E7070F0074FEBA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,10 +47,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		004E02BF28EDB3F2004B675B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				009AF9EF28E6F41C00DF9236 /* AppDelegate.swift */,
+				009AF9F128E6F41C00DF9236 /* SceneDelegate.swift */,
+				009AF9FD28E6F41E00DF9236 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		004E02C028EDB441004B675B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				009AF9F328E6F41C00DF9236 /* FirstViewController.swift */,
+				00F9BCCB28E7070F0074FEBA /* HomeViewController.swift */,
+				004E02BB28EDA744004B675B /* InfoViewController.swift */,
+				004E02B928EDA726004B675B /* BioViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		004E02C128EDB472004B675B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				009AF9F528E6F41C00DF9236 /* Main.storyboard */,
+				009AF9FA28E6F41E00DF9236 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		004E02C228EDB493004B675B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				004E02C328EDD877004B675B /* UserInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		009AF9E328E6F41C00DF9236 = {
 			isa = PBXGroup;
 			children = (
-				009AF9EE28E6F41C00DF9236 /* Log In */,
+				009AF9EE28E6F41C00DF9236 /* InfoAbout */,
 				009AF9ED28E6F41C00DF9236 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,32 +96,30 @@
 		009AF9ED28E6F41C00DF9236 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				009AF9EC28E6F41C00DF9236 /* Log In.app */,
+				009AF9EC28E6F41C00DF9236 /* InfoAbout.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		009AF9EE28E6F41C00DF9236 /* Log In */ = {
+		009AF9EE28E6F41C00DF9236 /* InfoAbout */ = {
 			isa = PBXGroup;
 			children = (
-				009AF9EF28E6F41C00DF9236 /* AppDelegate.swift */,
-				009AF9F128E6F41C00DF9236 /* SceneDelegate.swift */,
-				009AF9F328E6F41C00DF9236 /* FirstViewController.swift */,
-				00F9BCCB28E7070F0074FEBA /* WelcomeViewController.swift */,
-				009AF9F528E6F41C00DF9236 /* Main.storyboard */,
+				004E02C028EDB441004B675B /* ViewControllers */,
+				004E02C228EDB493004B675B /* Models */,
+				004E02BF28EDB3F2004B675B /* App */,
+				004E02C128EDB472004B675B /* Storyboards */,
 				009AF9F828E6F41E00DF9236 /* Assets.xcassets */,
-				009AF9FA28E6F41E00DF9236 /* LaunchScreen.storyboard */,
-				009AF9FD28E6F41E00DF9236 /* Info.plist */,
+				004E02BD28EDADCE004B675B /* dd.jpeg */,
 			);
-			path = "Log In";
+			path = InfoAbout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		009AF9EB28E6F41C00DF9236 /* Log In */ = {
+		009AF9EB28E6F41C00DF9236 /* InfoAbout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 009AFA0028E6F41E00DF9236 /* Build configuration list for PBXNativeTarget "Log In" */;
+			buildConfigurationList = 009AFA0028E6F41E00DF9236 /* Build configuration list for PBXNativeTarget "InfoAbout" */;
 			buildPhases = (
 				009AF9E828E6F41C00DF9236 /* Sources */,
 				009AF9E928E6F41C00DF9236 /* Frameworks */,
@@ -85,9 +129,9 @@
 			);
 			dependencies = (
 			);
-			name = "Log In";
+			name = InfoAbout;
 			productName = "Log In";
-			productReference = 009AF9EC28E6F41C00DF9236 /* Log In.app */;
+			productReference = 009AF9EC28E6F41C00DF9236 /* InfoAbout.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +149,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 009AF9E728E6F41C00DF9236 /* Build configuration list for PBXProject "Log In" */;
+			buildConfigurationList = 009AF9E728E6F41C00DF9236 /* Build configuration list for PBXProject "InfoAbout" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +162,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				009AF9EB28E6F41C00DF9236 /* Log In */,
+				009AF9EB28E6F41C00DF9236 /* InfoAbout */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +175,7 @@
 				009AF9FC28E6F41E00DF9236 /* LaunchScreen.storyboard in Resources */,
 				009AF9F928E6F41E00DF9236 /* Assets.xcassets in Resources */,
 				009AF9F728E6F41C00DF9236 /* Main.storyboard in Resources */,
+				004E02BE28EDADCE004B675B /* dd.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +189,10 @@
 				009AF9F428E6F41C00DF9236 /* FirstViewController.swift in Sources */,
 				009AF9F028E6F41C00DF9236 /* AppDelegate.swift in Sources */,
 				009AF9F228E6F41C00DF9236 /* SceneDelegate.swift in Sources */,
-				00F9BCCC28E7070F0074FEBA /* WelcomeViewController.swift in Sources */,
+				00F9BCCC28E7070F0074FEBA /* HomeViewController.swift in Sources */,
+				004E02BC28EDA744004B675B /* InfoViewController.swift in Sources */,
+				004E02C428EDD877004B675B /* UserInfo.swift in Sources */,
+				004E02BA28EDA726004B675B /* BioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Log In/Info.plist";
+				INFOPLIST_FILE = "Log In/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +371,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Log In/Info.plist";
+				INFOPLIST_FILE = "Log In/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -349,7 +397,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		009AF9E728E6F41C00DF9236 /* Build configuration list for PBXProject "Log In" */ = {
+		009AF9E728E6F41C00DF9236 /* Build configuration list for PBXProject "InfoAbout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				009AF9FE28E6F41E00DF9236 /* Debug */,
@@ -358,7 +406,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		009AFA0028E6F41E00DF9236 /* Build configuration list for PBXNativeTarget "Log In" */ = {
+		009AFA0028E6F41E00DF9236 /* Build configuration list for PBXNativeTarget "InfoAbout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				009AFA0128E6F41E00DF9236 /* Debug */,

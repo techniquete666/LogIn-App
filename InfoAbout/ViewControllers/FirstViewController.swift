@@ -11,7 +11,7 @@ class FirstViewController: UIViewController {
     private let password = "Password"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationVC = segue.destination as? WelcomeViewController else { return }
+        guard let destinationVC = segue.destination as? HomeViewController else { return }
         destinationVC.userName = userNameTF.text
     }
     
